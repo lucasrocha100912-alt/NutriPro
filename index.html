@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Viva Bem - Blog de Saúde e Bem-Estar</title>
+  <meta name="description" content="Viva Bem: dicas de saúde, bem-estar e qualidade de vida. Artigos claros para viver melhor.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#">
+        <span class="brand-viva">viva</span><span class="brand-bem">bem</span>
+      </a>
+      <nav class="nav">
+        <ul>
+          <li><a href="#artigos">Artigos</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Viva Bem</h1>
+        <p>Seu blog de saúde, bem‑estar e qualidade de vida.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#artigos">Ler artigos</a>
+          <a class="btn btn-secondary" href="#newsletter">Assinar newsletter</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="artigos" class="posts-section container">
+      <h2>Artigos em destaque</h2>
+      <div class="posts-grid">
+        <article class="card">
+          <a href="#">
+            <h3>Alimentação equilibrada no dia a dia</h3>
+            <p>Dicas simples para montar pratos nutritivos sem complicação.</p>
+            <span class="read-more">Ler mais</span>
+          </a>
+        </article>
+        <article class="card">
+          <a href="#">
+            <h3>Hábitos para dormir melhor</h3>
+            <p>Como construir uma rotina de sono restauradora.</p>
+            <span class="read-more">Ler mais</span>
+          </a>
+        </article>
+        <article class="card">
+          <a href="#">
+            <h3>Exercícios que cabem na sua rotina</h3>
+            <p>Movimente-se mesmo com pouco tempo disponível.</p>
+            <span class="read-more">Ler mais</span>
+          </a>
+        </article>
+        <article class="card">
+          <a href="#">
+            <h3>Saúde mental: pequenas pausas, grandes ganhos</h3>
+            <p>Práticas rápidas para reduzir o estresse ao longo do dia.</p>
+            <span class="read-more">Ler mais</span>
+          </a>
+        </article>
+        <article class="card">
+          <a href="#">
+            <h3>Hidratação: quanto de água beber?</h3>
+            <p>Entenda as necessidades do seu corpo ao longo das estações.</p>
+            <span class="read-more">Ler mais</span>
+          </a>
+        </article>
+        <article class="card">
+          <a href="#">
+            <h3>Check-up anual: por onde começar?</h3>
+            <p>O guia básico para organizar seus exames de rotina.</p>
+            <span class="read-more">Ler mais</span>
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <section id="newsletter" class="newsletter">
+      <div class="container">
+        <h2>Receba novidades</h2>
+        <p>Cadastre seu e-mail e receba conteúdos para viver melhor.</p>
+        <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Obrigado por assinar!');">
+          <input type="email" placeholder="Seu e-mail" required>
+          <button class="btn btn-primary" type="submit">Assinar</button>
+        </form>
+      </div>
+    </section>
+
+    <section id="sobre" class="about container">
+      <h2>Sobre</h2>
+      <p>O Viva Bem é um espaço dedicado à informação clara e prática sobre saúde e bem-estar. Nosso objetivo é ajudar você a fazer escolhas simples que geram impacto positivo no seu dia a dia.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <img src="assets/logo.png" alt="Logo Viva Bem" class="footer-logo">
+      <p class="small">Adicione seu arquivo de logo em <code>assets/logo.png</code>. © <span id="year"></span> Viva Bem.</p>
+    </div>
+  </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
