@@ -1,0 +1,230 @@
+/* Estilos do Blog Viva Bem - Paleta: azul claro, amarelo e branco */
+
+:root {
+  --blue-500: #5ec2de;
+  --blue-600: #47b6d5;
+  --yellow-500: #f7c844;
+  --yellow-600: #eabf3a;
+  --text-900: #1f2937;
+  --text-700: #374151;
+  --border-200: #e5e7eb;
+  --bg-50: #f9fbfd;
+  --white: #ffffff;
+  --radius: 14px;
+  --shadow: 0 8px 24px rgba(16, 24, 40, 0.08);
+}
+
+* { box-sizing: border-box; }
+html, body { padding: 0; margin: 0; }
+
+body {
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  color: var(--text-900);
+  background: var(--bg-50);
+  line-height: 1.6;
+}
+
+a { color: inherit; text-decoration: none; }
+
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* Cabeçalho */
+.site-header {
+  background: var(--white);
+  border-bottom: 1px solid var(--border-200);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+
+.brand {
+  font-weight: 800;
+  font-size: 1.6rem;
+  letter-spacing: 0.5px;
+}
+
+.brand-viva { color: var(--blue-600); }
+.brand-bem { color: var(--yellow-600); margin-left: 4px; }
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.nav a {
+  color: var(--text-700);
+  font-weight: 600;
+}
+
+.nav a:hover { color: var(--blue-600); }
+
+/* Hero */
+.hero {
+  background: radial-gradient(1200px 500px at -10% -10%, rgba(94, 194, 222, 0.15), transparent 50%),
+              radial-gradient(1000px 400px at 110% 0%, rgba(247, 200, 68, 0.18), transparent 50%);
+  padding: 72px 0;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  margin: 0 0 8px;
+}
+
+.hero p {
+  color: var(--text-700);
+  font-size: 1.125rem;
+  margin: 0 0 24px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  padding: 0 18px;
+  border-radius: 999px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: var(--blue-600);
+  color: var(--white);
+  box-shadow: var(--shadow);
+}
+
+.btn-primary:hover { background: #3faac8; }
+
+.btn-secondary {
+  background: var(--yellow-500);
+  color: #222;
+}
+
+.btn-secondary:hover { background: #f1b92b; }
+
+/* Posts */
+.posts-section {
+  padding: 48px 0;
+}
+
+.posts-section h2 {
+  font-size: 1.6rem;
+  margin: 0 0 20px;
+}
+
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: var(--white);
+  border: 1px solid var(--border-200);
+  border-radius: var(--radius);
+  padding: 20px;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(16, 24, 40, 0.12);
+}
+
+.card h3 {
+  margin: 0 0 8px;
+  font-size: 1.2rem;
+}
+
+.card p {
+  margin: 0 0 12px;
+  color: var(--text-700);
+}
+
+.read-more {
+  color: var(--blue-600);
+  font-weight: 700;
+}
+
+/* Newsletter */
+.newsletter {
+  background: linear-gradient(180deg, rgba(94, 194, 222, 0.15), rgba(247, 200, 68, 0.12));
+  padding: 48px 0;
+}
+
+.newsletter h2 {
+  margin: 0 0 8px;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+
+.newsletter-form input[type="email"] {
+  flex: 1 1 260px;
+  height: 44px;
+  border: 1px solid var(--border-200);
+  border-radius: 999px;
+  padding: 0 14px;
+  font-size: 1rem;
+}
+
+/* Sobre */
+.about {
+  padding: 48px 0;
+}
+
+/* Rodapé */
+.site-footer {
+  background: var(--white);
+  border-top: 4px solid var(--yellow-500);
+  padding: 24px 0 36px;
+  margin-top: 24px;
+}
+
+.footer-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+}
+
+.footer-logo {
+  height: 64px;
+  width: auto;
+}
+
+.small {
+  color: var(--text-700);
+  font-size: 0.9375rem;
+}
+
+@media (max-width: 640px) {
+  .hero h1 { font-size: 2.2rem; }
+  .header-inner { height: 56px; }
+}
